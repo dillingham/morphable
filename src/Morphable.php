@@ -20,5 +20,7 @@ trait Morphable
     {
         $this->object_type = get_class($model);
         $this->object_id = $model->getKey();
+
+        return $this;
     }
 }
