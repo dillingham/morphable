@@ -18,9 +18,9 @@ trait Morphable
 
     public function forMorph($model)
     {
-        $this->object_type = get_class($model);
-        $this->object_id = $model->getKey();
-
-        return $this;
+        return $this->forceFill([
+            'object_type' => get_class($model),
+            'object_id' => $model->getKey(),
+        ]);
     }
 }
