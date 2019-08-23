@@ -10,7 +10,7 @@ composer require dillingham/morphable
 ```php
 <?php
 
-class SomeController extends Controller
+class CommentController extends Controller
 {
     public $morphable = [
         \App\Post::class
@@ -19,6 +19,10 @@ class SomeController extends Controller
     public function store()
     {
         $model = $this->resolveMorph();
+
+        $comment = new Comment;
+        $comment->forMorph($model);
+        $comment->save();
     }
 }
 ```
