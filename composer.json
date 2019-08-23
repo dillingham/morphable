@@ -2,6 +2,7 @@
     "name": "dillingham/morphable",
     "description": "morphable functionality",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Brian Dillingham",
